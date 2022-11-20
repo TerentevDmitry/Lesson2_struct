@@ -1,7 +1,11 @@
 ﻿#include <iostream>
 #include <fstream>
 
+<<<<<<<<< Temporary merge branch 1
+// Задача 1. Знакомство с Visual Studio 2022. Циклический сдвиг в массиве
+=========
 // Задача 3. Вывод структуры
+>>>>>>>>> Temporary merge branch 2
 
 // Функция создания динамического массива
 int* create_arr(const int size_row)
