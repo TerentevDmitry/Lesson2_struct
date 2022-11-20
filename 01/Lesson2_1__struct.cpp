@@ -1,27 +1,23 @@
 ﻿#include <iostream>
 
-
 // Задача 1. Месяцы
 
 enum monthOfYear
 {
-    Январь = 1, Февраль, Март, Апрель, Май, Июнь, Июльь, Август, Сентябрь, Октябрь, Ноябрь, Декабрь
+    Январь = 1, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь
 };
-
-enum comment
-{
-    "До свидания" = -3;
-};
-
-
-
-
-
 
 int main()
 {
     setlocale(LC_ALL, "Russian"); // Корректное отображение Кириллицы
     system("chcp 1251");
+
+    unsigned int numberOfMonth = 0;
+
+    std::cout << "Введите номер месяца: ";
+    std::cin >> numberOfMonth;
+    std::cout << "Месяц: " << numberOfMonth << std::endl;
+
 
 
     /*color paint = color_black;
