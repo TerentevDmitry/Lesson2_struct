@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <fstream>
 
-// Задача 2. Счета
 
 // Функция создания динамического массива
 int* create_arr(const int size_row)
