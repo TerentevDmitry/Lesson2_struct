@@ -1,7 +1,6 @@
 ﻿#include <iostream>
 #include <fstream>
 
-// Задача 3. Вывод структуры
 
 // Функция создания динамического массива
 int* create_arr(const int size_row)
