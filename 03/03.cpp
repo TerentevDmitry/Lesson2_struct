@@ -1,20 +1,48 @@
-﻿// 03.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
+﻿#include <iostream>
 
-#include <iostream>
+// Задача 3. Вывод структуры
+
+struct adressOfHome
+{
+    std::string nameOfTown;
+    std::string nameOfStreet;
+    int numOfHouse;
+    int numOfApartment;
+    int index;
+};
+
+void PrintAdressOfHome(adressOfHome* residenceN)
+{
+    std::cout << "Город: " << residenceN->nameOfTown << std::endl;
+    std::cout << "Улица: " << residenceN->nameOfStreet << std::endl;
+    std::cout << "Номер дома: " << residenceN->numOfHouse << std::endl;
+    std::cout << "Номер квартиры: " << residenceN->numOfApartment << std::endl;
+    std::cout << "Индекс: " << residenceN->index << std::endl;
+
+    std::cout << std::endl;
+}
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    setlocale(LC_ALL, "Russian"); // Корректное отображение Кириллицы
+    system("chcp 1251");
+
+    adressOfHome residence1;
+    residence1.nameOfTown = "Москва";
+    residence1.nameOfStreet = "Арбат";
+    residence1.numOfHouse = 12;
+    residence1.numOfApartment = 8;
+    residence1.index = 123456;
+
+    adressOfHome residence2;
+    residence2.nameOfTown = "Ижевск";
+    residence2.nameOfStreet = "Пушкина";
+    residence2.numOfHouse = 59;
+    residence2.numOfApartment = 143;
+    residence2.index = 953769;
+
+    PrintAdressOfHome(&residence1);
+    PrintAdressOfHome(&residence2);
 }
-
-// Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
-// Отладка программы: F5 или меню "Отладка" > "Запустить отладку"
-
-// Советы по началу работы 
-//   1. В окне обозревателя решений можно добавлять файлы и управлять ими.
-//   2. В окне Team Explorer можно подключиться к системе управления версиями.
-//   3. В окне "Выходные данные" можно просматривать выходные данные сборки и другие сообщения.
-//   4. В окне "Список ошибок" можно просматривать ошибки.
-//   5. Последовательно выберите пункты меню "Проект" > "Добавить новый элемент", чтобы создать файлы кода, или "Проект" > "Добавить существующий элемент", чтобы добавить в проект существующие файлы кода.
-//   6. Чтобы снова открыть этот проект позже, выберите пункты меню "Файл" > "Открыть" > "Проект" и выберите SLN-файл.
