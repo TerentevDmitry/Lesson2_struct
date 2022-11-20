@@ -5,13 +5,13 @@
 // Список месяцев
 enum class monthOfYear
 {
-    Январь = 1, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь
+    January = 1, February, March, April, May, June, July, August, September, October, November, December
 };
 
 // Список комментариев для кода
 enum class commentForCode
 {
-    Введён_терминальный_ноль
+    terminalZeroIsEntered
 };
 
 int main()
@@ -31,7 +31,7 @@ int main()
         {
             std::cout << "До свидания" << std::endl;
             check = true;
-            return static_cast<int> (commentForCode::Введён_терминальный_ноль);
+            return static_cast<int> (commentForCode::terminalZeroIsEntered);
         }
         else if (NumberOfMonth < 1 || NumberOfMonth > 12) // Проверка на корректность номера месяца
         {
@@ -43,29 +43,29 @@ int main()
             
             switch (enteredNumberOfMonth)
             {
-                case (monthOfYear::Январь): std::cout << "Это Январь месяц." << std::endl;
+                case (monthOfYear::January): std::cout << "Это Январь месяц." << std::endl;
                     break;
-                case (monthOfYear::Февраль): std::cout << "Это Февраль месяц." << std::endl;
+                case (monthOfYear::February): std::cout << "Это Февраль месяц." << std::endl;
                     break;
-                case (monthOfYear::Март): std::cout << "Это Март месяц." << std::endl;
+                case (monthOfYear::March): std::cout << "Это Март месяц." << std::endl;
                     break;
-                case (monthOfYear::Апрель): std::cout << "Это Апрель месяц." << std::endl;
+                case (monthOfYear::April): std::cout << "Это Апрель месяц." << std::endl;
                     break;
-                case (monthOfYear::Май): std::cout << "Это Май месяц." << std::endl;
+                case (monthOfYear::May): std::cout << "Это Май месяц." << std::endl;
                     break;
-                case (monthOfYear::Июнь): std::cout << "Это Июнь месяц." << std::endl;
+                case (monthOfYear::June): std::cout << "Это Июнь месяц." << std::endl;
                     break;
-                case (monthOfYear::Июль): std::cout << "Это Июль месяц." << std::endl;
+                case (monthOfYear::July): std::cout << "Это Июль месяц." << std::endl;
                     break;
-                case (monthOfYear::Август): std::cout << "Это Август месяц." << std::endl;
+                case (monthOfYear::August): std::cout << "Это Август месяц." << std::endl;
                     break;
-                case (monthOfYear::Сентябрь): std::cout << "Это Сентябрь месяц." << std::endl;
+                case (monthOfYear::September): std::cout << "Это Сентябрь месяц." << std::endl;
                     break;
-                case (monthOfYear::Октябрь): std::cout << "Это Октябрь месяц." << std::endl;
+                case (monthOfYear::October): std::cout << "Это Октябрь месяц." << std::endl;
                     break;
-                case (monthOfYear::Ноябрь): std::cout << "Это Ноябрь месяц." << std::endl;
+                case (monthOfYear::November): std::cout << "Это Ноябрь месяц." << std::endl;
                     break;
-                case (monthOfYear::Декабрь): std::cout << "Это Декабрь месяц." << std::endl;
+                case (monthOfYear::December): std::cout << "Это Декабрь месяц." << std::endl;
                     break;
             }
         }
