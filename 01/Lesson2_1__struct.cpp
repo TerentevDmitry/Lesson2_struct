@@ -2,74 +2,77 @@
 
 // Задача 1. Месяцы
 
-enum monthOfYear
+// Список месяцев
+enum class monthOfYear
 {
     Январь = 1, Февраль, Март, Апрель, Май, Июнь, Июль, Август, Сентябрь, Октябрь, Ноябрь, Декабрь
 };
+
+// Список комментариев для кода
+enum class commentForCode
+{
+    Введён_терминальный_ноль
+};
+
+
 
 int main()
 {
     setlocale(LC_ALL, "Russian"); // Корректное отображение Кириллицы
     system("chcp 1251");
 
-    unsigned int numberOfMonth = 0;
+    int numberOfMonth = 0;
+    bool check = false;
+    
 
-    std::cout << "Введите номер месяца: ";
-    std::cin >> numberOfMonth;
-    std::cout << "Месяц: " << numberOfMonth << std::endl;
-
-
-
-    /*color paint = color_black;
-    color house(color_red);
-    color apple = color_red;
-
-    std::cout << paint << std::endl;
-    std::cout << house << std::endl;
-    std::cout << apple << std::endl;
-   
-    switch (apple)
+    do
     {
-    case color_black: std::cout << "Чёрный" << std::endl;
+        std::cout << "Введите номер месяца: "; 
+        std::cin >> numberOfMonth;
+
+        if (numberOfMonth == 0)
+        {
+            std::cout << "До свидания" << std::endl;
+            return static_cast<int> (commentForCode::Введён_терминальный_ноль);
+        }
+        else if (numberOfMonth < 1 || numberOfMonth > 12)
+        {
+            std::cout << "Неправильный номер месяца! " << std::endl;
+        }
+        else
+        {
+            check = true;
+        }
+
+    } while (!check);
+
+    switch (numberOfMonth)
+    {
+    case 1: std::cout << "Это Январь месяц." << std::endl;
         break;
-    case color_red: std::cout << "Красный" << std::endl;
+    case 2: std::cout << "Это Февраль месяц." << std::endl;
         break;
-    case color_blue: std::cout << "Синий" << std::endl;
+    case 3: std::cout << "Это Март месяц." << std::endl;
+        break;
+    case 4: std::cout << "Это Апрель месяц." << std::endl;
+        break;
+    case 5: std::cout << "Это Май месяц." << std::endl;
+        break;
+    case 6: std::cout << "Это Июнь месяц." << std::endl;
+        break;
+    case 7: std::cout << "Это Июль месяц." << std::endl;
+        break;
+    case 8: std::cout << "Это Август месяц." << std::endl;
+        break;
+    case 9: std::cout << "Это Сентябрь месяц." << std::endl;
+        break;
+    case 10: std::cout << "Это Октябрь месяц." << std::endl;
+        break;
+    case 11: std::cout << "Это Ноябрь месяц." << std::endl;
+        break;
+    case 12: std::cout << "Это Декабрь месяц." << std::endl;
         break;
     default: std::cout << "Не угадал" << std::endl;
         break;
-    }*/
-    
-
-
-
-    
-
-
-
-
-    //person p;
-    //std::cout << "name: ";
-    //p.first_name = "Егор";
-    ////std::cin >> p.first_name;
-    ////std::cout << std::endl;
-    //std::cout << p.first_name << std::endl;
-
-
-
-    //std::cout << "suname: ";
-    //p.second_name = "Летов";
-    ////std::cin >> p.second_name;
-    ////std::cout << std::endl;
-    //std::cout << p.second_name << std::endl;
-
-
-    //std::cout << "age: ";
-    //p.age = 39;
-    ////std::cin >> p.age;
-    ////std::cout << std::endl;
-
-    //std::cout << p.age << " years." << std::endl;
-
-
+    }
 }
