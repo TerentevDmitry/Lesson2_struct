@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿
+
+#include <iostream>
 
 // Задача 2. Счета
 
